@@ -15,7 +15,7 @@ Please add the following functionalities to the project:
 1. [MOKA-001] Finish the implementation of Create/Update/Delete for Items
 2. [MOKA-002] Finish the implementation of User registration (and the Business associated with the User)
 3. [MOKA-003] Add the test cases for all the model and controllers
-4. [MOKA-004][Extra Credit] Improve the simple Authorization model
+4. [MOKA-004][Extra Credit] Improve the simple Authentication model
 
 Then you will need to create a pull request against the `master`. There must be at least 3 commits (plus extra credit if you do so).
 
