@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
     # check if user logged in, if not redirect to login page
     if current_user.present?
-      redirect_to items_path
+      redirect_to current_user, notice: "Welcome back #{current_user.first_name} #{current_user.last_name}"
     else
       redirect_to login_path
     end
@@ -10,6 +10,5 @@ class HomeController < ApplicationController
 
   def signup
     @user = User.new
-    # TODO: [MOKA-002] Finish the implementation of User registration
   end
 end
