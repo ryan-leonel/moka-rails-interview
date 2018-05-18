@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    redirect_to current_user if current_user
     @user = User.new
   end
 
