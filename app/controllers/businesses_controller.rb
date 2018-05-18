@@ -34,7 +34,7 @@ class BusinessesController < ApplicationController
   def update
     @business = Business.find(params[:id])
     if @business.update_attributes(business_params)
-      redirect_to @business, notice: "Business #{@business.name} has been successfully updated"
+      redirect_to root_url, notice: "Business #{@business.name} has been successfully updated"
     else
       render 'edit'
     end
@@ -44,9 +44,9 @@ class BusinessesController < ApplicationController
   def destroy
     @business = Business.find_by(id: params[:id])
     if @business.try(:destroy)
-      redirect_to @business, notice: "Business #{@business.name} has been successfully deleted"
+      redirect_to root_url, notice: "Business #{@business.name} has been successfully deleted"
     else
-      redirect_to @business, alert: "Failed to delete business #{@business.name}"
+      redirect_to root_url, alert: "Failed to delete business #{@business.name}"
     end
   end
 
